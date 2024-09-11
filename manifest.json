@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Thread Extractor",
+  "version": "1.0",
+  "description": "Extracts text from Twitter threads",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://twitter.com/*",
+    "https://x.com/*",
+    "https://api.groq.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [".env"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
