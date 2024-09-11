@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Twitter Thread Extractor",
+  "name": "X-tension",
   "version": "1.0",
   "description": "Extracts text from Twitter threads",
   "permissions": [
